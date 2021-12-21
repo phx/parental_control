@@ -1,3 +1,5 @@
+![logo](./logo.png?raw=true)
+
 # Parental Control Squid
 
 **Dependencies:**
