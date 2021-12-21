@@ -1,0 +1,39 @@
+# Defaults are uncommented
+# Commented entries are ones that should be altered before running the script
+
+[smtp]
+server = smtp.gmail.com
+port = 465
+# user = turdfurguson@gmail.com
+# pass = [application password from google account or smtp password]
+from_name = ParentalControlAlerts
+# from_addr = turdfurguson+parentalcontrol@gmail.com
+subject = Parental Control Alert
+
+[alerts]
+### Enter the email addresses below to be notified:
+# addresses = turdfurguson@gmail.com 5555555@vtext.com 5555555@tmomail.net
+
+[users]
+### Enter the friendly names of the users separated by only spaces:
+# names = Bob Alice
+### Enter the hostnames of the users in the same order as listed in names above:
+# alert_hosts = pc-01.local pc-03.local
+
+[files]
+wordlist = wordlist.txt
+offense_log = offenses.log
+### The value of 'squid_access_log' below should be either be set to 'access.log'
+### or commented out if the value of 'use_remote_squid_host' is set to 'yes'
+### under [remote_squid_host].
+squid_access_log = /var/log/squid/access.log
+
+[remote_squid_host]
+# if 'use_remote_squid_host' is set to 'yes',
+# this requires passwordless key-based authentication to be set up
+# between the host running the script and the host running squid
+use_remote_squid_host = no
+# remote_user = username
+# remote_host = 192.168.1.1
+# remote_port = 22
+# remote_log_path = /var/log/squid/access.log
